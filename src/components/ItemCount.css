@@ -1,0 +1,36 @@
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    border: 1px solid gray;
+    height: 10em;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.item-count {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-count button {
+    margin: 1em 4em ;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.item-count p {
+    margin: 1em 0;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+#btnAddCart {
+    margin-top: 1em;
+    width: 15em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+}

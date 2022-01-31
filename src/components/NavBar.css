@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+}
+
+.menu_top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 40%;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-garabatos {
+    display: flex;
+    line-height: 2em;
+    justify-content: flex-end;
+}
+
+.logo-cart {
+    display: flex;
+    line-height: 2em;
+    justify-content: flex-end;
+
+}
+
+/* NAVBAR PARTE INFERIOR */
+
+.menu_bottom {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3em 15em;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: red;
+    
+}
+
+
+.menu_bottom a {
+    font-size: 1.4em;
+    margin-top: -.2em;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+#nena-menu {
+    line-height: 2.5em;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#nene-menu {
+    line-height: 2.5em;
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#baby-menu {
+    line-height: 2.5em;
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#acce-menu {
+    line-height: 2.5em;
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.list-container {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+    padding: 2em 0;
+    grid-area: 2 / 1 / 3 / 7;
+    text-align: start;
+}
+
+.list-container ul {
+    border-left: 1px solid gray;
+    margin: 0 4em;
+    list-style: none;
+}
+
+.list-container ul li {
+    margin-left: 1em;
+    margin-top: .3em;
+}
+
+.list-container ul li a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+#nena-menu:hover+.list-container {
+    background-color: black;
+
+}
