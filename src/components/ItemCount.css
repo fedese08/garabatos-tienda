@@ -17,6 +17,7 @@
 .item-count button {
     margin: 1em 4em ;
     height: 2em;
+    width: 2em;
     font-size: 1em;
     font-weight: bold;
 }
