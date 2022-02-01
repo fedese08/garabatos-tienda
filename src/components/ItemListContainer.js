@@ -3,7 +3,7 @@ import React
 import ItemCount from './ItemCount'
 import ItemList from './ItemList';
 import './ItemListContainer.css'
-import { products } from '../apis/api'
+import { products } from '../assets/apis/api'
 
 
 
