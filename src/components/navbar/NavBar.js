@@ -1,7 +1,7 @@
 import React from 'react'
-import '../components/NavBar.css'
-import CartWidget from './CartWidget'
-import logoImg from '../assets/images/Logo.png'
+import './NavBar.css'
+import CartWidget from '../cartWidget/CartWidget'
+import logoImg from '../../assets/images/Logo.png'
     
 
 export default function NavBar({cartCount}) {

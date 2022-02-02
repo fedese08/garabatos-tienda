@@ -1,7 +1,8 @@
 import './App.css';
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import NavBar from './components/navbar/NavBar'
+import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import { useState } from 'react';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
 function App() {
   
@@ -15,9 +16,10 @@ function App() {
   return (
     <div className="App">
       <NavBar cartCount={cartCount}/>
-      <div className="ItemListContainer">
+      {/* <div className="ItemListContainer">
         <ItemListContainer onAdd={onAdd}/>
-      </div>
+      </div> */}
+      <ItemDetailContainer onAdd={onAdd}/>
     </div>
   );
 }

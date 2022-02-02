@@ -1,8 +1,8 @@
 .item-count-container {
     display: flex;
-    flex-direction: column;
-    width: 20em;
-    border: 1px solid gray;
+    /* flex-direction: column; */
+    /* width: 20em; */
+    /* border: 1px solid gray; */
     height: 10em;
 
     align-items: center;
@@ -12,14 +12,17 @@
 .item-count {
     display: flex;
     flex-direction: row;
+    padding-top: 1em;
 }
 
 .item-count button {
-    margin: 1em 4em ;
+    margin: 1em 2em ;
     height: 2em;
     width: 2em;
     font-size: 1em;
     font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid;
 }
 
 .item-count p {
@@ -30,8 +33,11 @@
 }
 #btnAddCart {
     margin-top: 1em;
-    width: 15em;
-    height: 3em;
+    width: fit-content;
+    height: 2.5em;
+    padding: 0 1em;
     font-size: 1em;
     font-weight: bold;
+    border-radius: 3px; 
+    border: 1px solid;
 }
