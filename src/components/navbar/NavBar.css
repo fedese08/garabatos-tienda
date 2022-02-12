@@ -32,6 +32,11 @@
 
 }
 
+.linkCart {
+    text-decoration: none;
+    color: black;
+}
+
 /* NAVBAR PARTE INFERIOR */
 
 .menu_bottom {

@@ -7,10 +7,10 @@ export default function ItemList({products, getItem}) {
 
   return (
     <div className='products'>
-      {
 
+    {/* Devuelvo un componente item por cada producto */}
+      {
         products.map(item =>{
-            {/* console.log(item); */}
             return (
                 <Item key={item.id} item={item} getItem={getItem}/>
             )

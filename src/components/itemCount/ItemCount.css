@@ -23,6 +23,8 @@
     font-weight: bold;
     border-radius: 3px;
     border: 1px solid;
+    cursor: pointer;
+
 }
 
 .item-count p {
@@ -40,4 +42,7 @@
     font-weight: bold;
     border-radius: 3px; 
     border: 1px solid;
+    cursor: pointer;
+    background-color: #F7575F;
+    color: #f2f2f2;
 }

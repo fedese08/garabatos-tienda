@@ -2,6 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import CartWidget from '../cartWidget/CartWidget'
 import logoImg from '../../assets/images/Logo.png'
+import { Link } from 'react-router-dom'
     
 
 export default function NavBar({cartCount}) {
@@ -9,22 +10,26 @@ export default function NavBar({cartCount}) {
         <div className="menu">
             <div className="menu_top">
                 <div className="logo-garabatos">
-                    <img src={logoImg}/>
+                    <Link to="/" >
+                        <img src={logoImg}/>
+                    </Link>
                 </div>
                 <div className="logo-cart">
-                    <CartWidget cartCount={cartCount}/>
+                    <Link to="/cart" className="linkCart">
+                        <CartWidget cartCount={cartCount}/>
+                    </Link>
                 </div>
             </div>
             <div className="menu_bottom">
                 <div className="menus-container">
-                    <a href="#" id="nena-menu">Nena</a>
+                    <Link to="/gender/nena" id="nena-menu">Nena</Link>
                     <div className="list-container-nena">
                         <ul className="categorias">
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Zapatos</a></li>
-                            <li><a href="#">Ojotas</a></li>
-                            <li><a href="#">Guillerminas</a></li>
-                            <li><a href="#">Botas</a></li>
+                            <li><Link to="/category/zapatilla">Zapatillas</Link></li>
+                            <li><Link to="/category/zapato">Zapatos</Link></li>
+                            <li><Link to="/category/ojota">Ojotas</Link></li>
+                            <li><Link to="/category/guillermina">Guillerminas</Link></li>
+                            <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
                             <li><a href="#">Ferli</a></li>
@@ -39,14 +44,13 @@ export default function NavBar({cartCount}) {
                             <li><a href="#">Escolar</a></li>
                         </ul>
                     </div>
-                    <a href="#" id="nene-menu">Nene</a>
+                    <Link to="/gender/nene" id="nene-menu">Nene</Link>
                     <div className="list-container-nene">
                         <ul className="categorias">
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Zapatos</a></li>
-                            <li><a href="#">Ojotas</a></li>
-                            {/* <li><a href="#">Guillerminas</a></li> */}
-                            <li><a href="#">Botas</a></li>
+                            <li><Link to="/category/zapatilla">Zapatillas</Link></li>
+                            <li><Link to="/category/zapato">Zapatos</Link></li>
+                            <li><Link to="/category/ojota">Ojotas</Link></li>
+                            <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
                             <li><a href="#">Ferli</a></li>
@@ -61,14 +65,14 @@ export default function NavBar({cartCount}) {
                             <li><a href="#">Escolar</a></li>
                         </ul>
                     </div>
-                    <a href="#" id="baby-menu">Baby</a>
+                    <Link to="/gender/baby" id="baby-menu">Baby</Link>
                     <div className="list-container-baby">
                         <ul className="categorias">
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Zapatos</a></li>
-                            <li><a href="#">Ojotas</a></li>
-                            <li><a href="#">Guillerminas</a></li>
-                            <li><a href="#">Botas</a></li>
+                            <li><Link to="/category/zapatilla">Zapatillas</Link></li>
+                            <li><Link to="/category/zapato">Zapatos</Link></li>
+                            <li><Link to="/category/ojota">Ojotas</Link></li>
+                            <li><Link to="/category/guillermina">Guillerminas</Link></li>
+                            <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
                             <li><a href="#">Ferli</a></li>

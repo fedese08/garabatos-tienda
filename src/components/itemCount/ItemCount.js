@@ -6,24 +6,22 @@ import './ItemCount.css'
 export default function ItemCount({stock,initial,onAdd}) {
 
 
-    const [count, setCount] = useState(initial);
+    const [itemCounter, setItemCounter] = useState(initial);
 
     const lessBtn = () => {
-        setCount(count - 1);
-        if (count <= 0) {
-            setCount(0);
+        if (itemCounter > 0) {
+            setItemCounter(itemCounter - 1);
         }
     }
     
     const addBtn = () => {
-        setCount(count + 1);
-        if (count >= stock){
-            setCount(stock);
+        if (itemCounter < stock){
+            setItemCounter(itemCounter + 1);
         }
     }
 
     const add = () => {
-        onAdd(count)
+        onAdd(itemCounter)
     }
 
 
@@ -31,7 +29,7 @@ export default function ItemCount({stock,initial,onAdd}) {
     <div className="item-count-container">
         <div className="item-count">
             <button onClick={lessBtn}>-</button>
-            <p>{count}</p>
+            <p>{itemCounter}</p>
             <button onClick={addBtn}>+</button>
         </div>
         <button id="btnAddCart" onClick={add}>Agregar al carrito</button>
