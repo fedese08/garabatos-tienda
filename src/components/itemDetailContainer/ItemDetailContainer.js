@@ -5,7 +5,7 @@ import { getItems } from '../../assets/apis/api'
 import ItemDetail from '../itemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
-export default function ItemDetailContainer({changeCount}) {
+export default function ItemDetailContainer({}) {
 
     const [item, setItem] = useState([]);
     
@@ -22,8 +22,8 @@ export default function ItemDetailContainer({changeCount}) {
     <div>
       {        
         item.length === 0 ? 
-        <p>Cargando producto...</p> :
-        <ItemDetail item={item} changeCount={changeCount}/>
+        <p className='loading-text'>Cargando producto...</p> :
+        <ItemDetail item={item}/>
         }
         
     </div>

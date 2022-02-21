@@ -1,36 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 import ItemCount from '../itemCount/ItemCount';
 import './ItemDetail.css'
 
 
 
 
-export default function ItemDetail({item, changeCount}) {
+export default function ItemDetail({item}) {
 
   const [mainImg, setMainImg] = useState(item.imageURL[0]);
 
-  const [itemCount, setItemCount] = useState(undefined);
+  const { addToCart } = useContext(CartContext);
 
-  function onAddItem(newItemCount) {
-    if (!itemCount) {
-      setItemCount(newItemCount)
-    }
-    else {
-      setItemCount(itemCount + newItemCount);
-    }
-    
+  function onAdd(quantity) {
+    addToCart(item, quantity);
   }
-
-
-  useEffect(() =>{
-    console.log(itemCount)
-    changeCount(itemCount);
-  }, [itemCount])
-
-
-
-
 
 
   const changeImg = (img) => {
@@ -57,7 +42,7 @@ export default function ItemDetail({item, changeCount}) {
               <h2>{item.title}</h2>
               <h1>${item.price}</h1>
               <p className="desc">{item.description}</p>
-              <ItemCount className="itemCount" stock={5} initial={0} onAdd={onAddItem}/>
+              <ItemCount className="itemCount" stock={5} initial={0} onAdd={onAdd}/>
               <Link to='/cart'>
                 <button className="goCartBtn">Ir al carrito</button>
               </Link>
