@@ -6,45 +6,46 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartContextProvider from './context/cartContext';
 import Cart from './components/cart/Cart';
+import AddItemContainer from './components/addItem/AddItemContainer';
 
 function App() {
-
-
-  
-  const [cartCount, setCartCount] = useState('')
-
-
-  function changeCount(count){
-    setCartCount(count)
-  }
 
 
   return (
     <CartContextProvider>
       <BrowserRouter>
         <div className="App">
-          <NavBar cartCount={cartCount}/>
+          <NavBar />
           <Routes>
             <Route
               path="/"
-              element={<ItemListContainer changeCount={changeCount} />}
+              element={<ItemListContainer  />}
             />
             <Route
               path="/item/:itemId"
-              element={<ItemDetailContainer changeCount={changeCount} />}
+              element={<ItemDetailContainer />}
             />
             <Route
               path="/category/:categoryName"
-              element={<ItemListContainer changeCount={changeCount} />}
+              element={<ItemListContainer  />}
             /> 
             <Route
               path="/gender/:genderName"
-              element={<ItemListContainer changeCount={changeCount} />}
+              element={<ItemListContainer  />}
             /> 
+            <Route
+              path="/brand/:brandName"
+              element={<ItemListContainer  />}
+      
+            />
             <Route
               path="/cart"
               element={<Cart/>}
             /> 
+            <Route
+              path="/2706admin"
+              element={<AddItemContainer/>}
+            />
           </Routes>
         </div>
       </BrowserRouter>

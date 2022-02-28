@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getItems } from '../../assets/apis/api';
 import { CartContext } from '../../context/cartContext';
 import ItemCount from '../itemCount/ItemCount';
 import './ItemDetail.css'
@@ -12,6 +13,8 @@ export default function ItemDetail({item}) {
   const [mainImg, setMainImg] = useState(item.imageURL[0]);
 
   const { addToCart } = useContext(CartContext);
+
+  const products = getItems();
 
   function onAdd(quantity) {
     addToCart(item, quantity);
@@ -42,7 +45,7 @@ export default function ItemDetail({item}) {
               <h2>{item.title}</h2>
               <h1>${item.price}</h1>
               <p className="desc">{item.description}</p>
-              <ItemCount className="itemCount" stock={5} initial={0} onAdd={onAdd}/>
+              <ItemCount className="itemCount" stock={item.stock} initial={0} onAdd={onAdd}/>
               <Link to='/cart'>
                 <button className="goCartBtn">Ir al carrito</button>
               </Link>

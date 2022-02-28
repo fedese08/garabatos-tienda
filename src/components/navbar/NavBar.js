@@ -32,11 +32,12 @@ export default function NavBar({cartCount}) {
                             <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
-                            <li><a href="#">Ferli</a></li>
-                            <li><a href="#">Marcel</a></li>
-                            <li><a href="#">Atomik</a></li>
-                            <li><a href="#">Diez Indiecitos</a></li>
-                            <li><a href="#">Crocs</a></li>
+                            <li><Link to="/brand/Ferli">Ferli</Link></li>
+                            <li><Link to="/brand/Marcel">Marcel</Link></li>
+                            <li><Link to="/brand/Atomik">Atomik</Link></li>
+                            <li><Link to="/brand/Diez indiecitos">Diez Indiecitos</Link></li>
+                            <li><Link to="/brand/Croc">Crocs</Link></li>
+                            <li><Link to="/brand/Addnice">Addnice</Link></li>
                         </ul>
                         <ul className="temporada">
                             <li><a href="#">Primavera/Verano</a></li>
@@ -53,11 +54,12 @@ export default function NavBar({cartCount}) {
                             <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
-                            <li><a href="#">Ferli</a></li>
-                            <li><a href="#">Marcel</a></li>
-                            <li><a href="#">Atomik</a></li>
-                            <li><a href="#">Diez Indiecitos</a></li>
-                            <li><a href="#">Crocs</a></li>
+                            <li><Link to="/brand/Ferli">Ferli</Link></li>
+                            <li><Link to="/brand/Marcel">Marcel</Link></li>
+                            <li><Link to="/brand/Atomik">Atomik</Link></li>
+                            <li><Link to="/brand/Diez indiecitos">Diez Indiecitos</Link></li>
+                            <li><Link to="/brand/Croc">Crocs</Link></li>
+                            <li><Link to="/brand/Addnice">Addnice</Link></li>
                         </ul>
                         <ul className="temporada">
                             <li><a href="#">Primavera/Verano</a></li>
@@ -75,11 +77,12 @@ export default function NavBar({cartCount}) {
                             <li><Link to="/category/bota">Botas</Link></li>
                         </ul>
                         <ul className="marcas">
-                            <li><a href="#">Ferli</a></li>
-                            <li><a href="#">Marcel</a></li>
-                            <li><a href="#">Atomik</a></li>
-                            <li><a href="#">Diez Indiecitos</a></li>
-                            <li><a href="#">Crocs</a></li>
+                            <li><Link to="/brand/Ferli">Ferli</Link></li>
+                            <li><Link to="/brand/Marcel">Marcel</Link></li>
+                            <li><Link to="/brand/Atomik">Atomik</Link></li>
+                            <li><Link to="/brand/Diez indiecitos">Diez Indiecitos</Link></li>
+                            <li><Link to="/brand/Croc">Crocs</Link></li>
+                            <li><Link to="/brand/Addnice">Addnice</Link></li>
                         </ul>
                         <ul className="temporada">
                             <li><a href="#">Primavera/Verano</a></li>

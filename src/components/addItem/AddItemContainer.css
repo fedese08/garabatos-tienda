@@ -1,0 +1,66 @@
+.form-product {
+    margin-top: 2em;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-product form {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    text-align: left;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#btnNewItem {
+    max-width: 10em;
+    font-size: 1em;
+    font-weight: bold;
+    height: 2em;
+
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-product input {
+    width: 20em;
+    min-height: 2em;
+    margin: 1em 0;
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+.input-num {
+    max-width: 4em;
+}
+
+.form-product textarea {
+    min-width: 20em;
+    min-height: 2em;
+    margin: 1em 0;
+    font-weight: bold;
+    padding: 1em 1em;
+}
+
+.form-product label {
+    margin: .6em 0;
+    font-size: 1.5em;
+    margin-right: 3em;
+    font-weight: bold;
+}
+
+#numero {
+    margin-top: 1.5em;
+}

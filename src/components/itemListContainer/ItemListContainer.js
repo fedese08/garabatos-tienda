@@ -8,13 +8,16 @@ import { useParams } from 'react-router-dom';
 
 
 
+
 export default function ItemListContainer({ onAdd }) {
 
   const [items, setItems] = useState([]);
 
   const { categoryName } = useParams();
   const { genderName } = useParams();
+  const { brandName } = useParams();
  
+
 
   useEffect(() => {
 
@@ -22,30 +25,36 @@ export default function ItemListContainer({ onAdd }) {
     getItems().then((items) => {
 
       // Verifico el estado de la categoria, de no existir retorno todos los items
-      if (!categoryName && !genderName) {
+      if (!categoryName && !genderName && !brandName) {
         setItems(items);
       } 
-      else if (!genderName){
+      else if (categoryName) {
         const categoryItems = items.filter(item => item.category === categoryName);
 
         setItems(categoryItems);
-        
+
+
       }
-      else if (!categoryName){
+      else if (genderName) {
         const genderItems = items.filter(item => {
           return item.gender === genderName ||
                 item.gender === "unisex"
 
         });
-
         setItems(genderItems);
-        
+
       }
+      else if (brandName) {
+        const brandItems = items.filter(item => item.brand === brandName);
+
+        setItems(brandItems);
+      }
+
     }).catch((err) => {
       console.log(err);
     })
     
-  },[categoryName, genderName])
+  },[categoryName, genderName, brandName])
 
 
   return (
