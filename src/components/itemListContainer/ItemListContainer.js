@@ -1,5 +1,4 @@
-import React 
-, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ItemList from '../itemList/ItemList';
 import './ItemListContainer.css'
 import { getItems } from '../../assets/apis/api'

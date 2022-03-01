@@ -5,7 +5,7 @@ import { getItems } from '../../assets/apis/api'
 import ItemDetail from '../itemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
-export default function ItemDetailContainer({}) {
+export default function ItemDetailContainer() {
 
     const [item, setItem] = useState([]);
     

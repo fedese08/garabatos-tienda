@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getItems } from '../../assets/apis/api';
 import { CartContext } from '../../context/cartContext';
 import ItemCount from '../itemCount/ItemCount';
 import './ItemDetail.css'
@@ -14,7 +13,6 @@ export default function ItemDetail({item}) {
 
   const { addToCart } = useContext(CartContext);
 
-  const products = getItems();
 
   function onAdd(quantity) {
     addToCart(item, quantity);

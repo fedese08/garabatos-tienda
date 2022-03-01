@@ -36,14 +36,11 @@ export default function AddItemContainer() {
 
     async function onSubmit(event){
         event.preventDefault()
-        console.log(title)
         
+        // Compruebo que todos los campos esten completos
         if (![title,category,gender,description].some(field => field === "")) {
 
             var imageURL = [];
-
-            
-
             
             image.map (async(img) => {
                 
@@ -54,14 +51,7 @@ export default function AddItemContainer() {
                 let url = await getDownloadURL(uploadTask.ref)
                 imageURL.push(url)
 
-                // console.log(url)
             })
-
-            // imageURL.forEach(img => console.log(img))
-            console.log(imageURL)
-                
-            
-
 
             const itemCollection = collection(db, `items`);
             
@@ -74,8 +64,6 @@ export default function AddItemContainer() {
                 stock,
                 imageURL: imageURL,
             }
-
-            console.log(newItem)
             
             addDoc(itemCollection, newItem)
 
