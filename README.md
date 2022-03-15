@@ -1,7 +1,2 @@
-# Primer entrega del proyecto final Garabatos
+# Entrega final del proyecto Garabatos CODERHOUSE
 
-Navbar con categorias y subcategorias + cartWidget y cartCounter 
-
-Categorias navegables
-
-Catalogo de productos navegables a sus ItemDetails
