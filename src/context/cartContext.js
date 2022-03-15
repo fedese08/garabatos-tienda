@@ -7,7 +7,7 @@ const CartContextProvider = ( {children} ) => {
     
     const [ cart, setCart ] = useState([]);
 
-    function addToCart(item, quantity) {
+    const addToCart= (item, quantity) => {
 		if(isInCart(item.id)) {     // Si el producto ya existe en el carrito, lo sumo
 			const updateQuantity = [...cart]
 			updateQuantity.forEach(cartItem => {
@@ -15,10 +15,8 @@ const CartContextProvider = ( {children} ) => {
 					cartItem.quantity += 1
 				}
 			})
-            alert("Añadido al carrito")
 			return setCart(updateQuantity)
 		}
-        alert("Añadido al carrito")
 		return setCart([...cart, {...item, quantity}])  // Si no...
 	}
 

@@ -12,6 +12,10 @@ export default function Cart() {
 
     const [orderId, setOrderId] = useState("")
 
+    const showForm = () => {
+      document.getElementById('cartForm').classList.add('showform')
+      // document.getElementById('btnFinish').classList.add('hide')
+    }
 
     if ( orderId !== ''){
       return (
@@ -26,47 +30,56 @@ export default function Cart() {
 
     
   return (
-    <div>
-      <h1 className="cartText">CARRITO</h1>
-      {
-        cart.length === 0 ? // Si el carrito esta vacio...
-        <div>
-          <p>El carrito esta vacio.</p>
-          
-          <Link to="/"><p>Volver al inicio.</p></Link>
-        </div> :
-
-        <div  className = "cartTable">
-          <ul>
-            <li className = "cartTitles">
-              <p className = "prodText">Producto</p>
-              <p className = "priceText">Precio</p>
-              <p className = "quantText">Cant.</p>
-            </li>
-          </ul>
-          <ul>
-          {
-            cart.map(cartItem =>( // Si el carrito no esta vacio, muestro la lista de productos
-              <li key={cartItem.id} className="prod-cart">
-                <p className = "prodText">{cartItem.title}</p>
-                <p className = "priceText">${cartItem.price}</p>
-                <p className = "quantText">x{cartItem.quantity}</p>
-                <button id="delete" onClick={()=> deleteItem(cartItem.id)}>X</button>
-              </li>
-            ))
-          }
-          </ul>
-          <div className="totalPrice">
-            <p>Total: </p>  
-            <p>${getTotal()}</p>  
-          </div>
+    <div className="container">
+        <h1 className="cartText">CARRITO DE COMPRAS</h1>
+        {
+          cart.length === 0 ? // Si el carrito esta vacio...
           <div>
-            <button id="btnClean" onClick={deleteAll}>Limpiar Carrito</button>
+            <p>El carrito esta vacio.</p>
+            
+            <Link to="/"><p>Volver al inicio.</p></Link>
+          </div> :
+  
+          <div>
+            <div className = "cartTable">
+              <ul className='tableCat'>
+                <li className = "prodInfo"><p>PRODUCTO</p></li>
+                <li className = "priceText"><p>PRECIO</p></li>
+                <li className = "quantText"><p>CANTIDAD</p></li>
+              </ul>
+              {
+                cart.map(cartItem =>( // Si el carrito no esta vacio, muestro la lista de productos
+                  <ul className="prod-cart">
+                    <li key={cartItem.id} className="prodInfo" >
+                      <div className="prodInfo">
+                        <img src={cartItem.imageURL[0]}/>
+                        <p className = "prodText">{cartItem.title}</p>  
+                      </div>
+                    </li>
+                      <li className = "priceText">${cartItem.price}</li>
+                      <li className = "quantText">x{cartItem.quantity}</li>
+                      <button id="delete" onClick={()=> deleteItem(cartItem.id)}>X</button>
+                  </ul>
+                ))
+              }
+              <div className="total-buttons">
+                <div className="totalPrice">
+                  <p>Total: </p>  
+                  <h2>${getTotal()}</h2> 
+                </div> 
+                  <div className="buttons">
+                      {/* <button id='btnFinish' onChange={showForm()}>FINALIZAR COMPRA</button>, */}
+                      <button id="btnClean" onClick={deleteAll}>LIMPIAR CARRITO</button>
+                    </div>
+              </div>
+            </div>
+            <div id='cartForm'>
+              <CartForm setOrderId={setOrderId}/>
+            </div>
           </div>
-          <CartForm setOrderId={setOrderId}/>
-        </div>
-      }
+            }
 
+          
     </div>
   )
 }

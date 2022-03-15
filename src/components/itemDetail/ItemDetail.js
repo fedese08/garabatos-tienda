@@ -38,7 +38,6 @@ export default function ItemDetail({item}) {
                 })}
             </div>
         </div>
-        <div>
           <div className="details">
               <h2>{item.title}</h2>
               <h1>${item.price}</h1>
@@ -48,7 +47,6 @@ export default function ItemDetail({item}) {
                 <button className="goCartBtn">Ir al carrito</button>
               </Link>
           </div>
-        </div>
     </div>
   );
 }

@@ -94,8 +94,8 @@ export default function NavBar({cartCount}) {
                     <div className="list-container-acce">
                         <ul className="categorias">
                             <li><a href="#">Mochilas</a></li>
-                            <li><a href="#">Otros</a></li>
-                            <li><a href="#">Otros</a></li>
+                            <li><a href="#">Cartucheras</a></li>
+                            <li><a href="#">Medias</a></li>
                             <li><a href="#">Otros</a></li>
                         </ul>
                     </div>

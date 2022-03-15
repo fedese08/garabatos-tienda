@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Item.css'
 
-export default function Item({item, getItem}) {
-
-
+export default function Item({item}) {
 
   return (
     <Link to={"/item/"+item.id } className="linkRoute">

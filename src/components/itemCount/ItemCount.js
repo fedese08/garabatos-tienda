@@ -21,7 +21,9 @@ export default function ItemCount({stock,initial,onAdd}) {
     }
 
     const add = () => {
-        onAdd(itemCounter)
+        if (itemCounter != 0){
+            onAdd(itemCounter)
+        }
     }
 
 
@@ -32,7 +34,11 @@ export default function ItemCount({stock,initial,onAdd}) {
             <p>{itemCounter}</p>
             <button onClick={addBtn}>+</button>
         </div>
-        <button id="btnAddCart" onClick={add}>Agregar al carrito</button>
+        {
+            itemCounter != 0 
+            ? <button id="btnAddCart" onClick={add}>Agregar al carrito</button>
+            : <button id="btnAddCartBlock" onClick={add}>Agregar al carrito</button>
+        }
     </div>
 
   );
